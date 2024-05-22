@@ -27,7 +27,7 @@ const config: HardhatUserConfig = {
       forking: {
         enabled: process.env.FORKING_ENABLED === "true",
         blockNumber: Number(process.env.FORKING_BLOCK_NUM) || undefined,
-        url: node_url("bsc"),
+        url: node_url("mainnet"),
       },
       accounts: accounts("localhost"),
       mining: {
@@ -41,21 +41,21 @@ const config: HardhatUserConfig = {
       accounts: accounts("localhost"),
       tags: ["local", "test"],
     },
-    bsc: {
-      url: node_url("bsc"),
-      accounts: accounts("bsc"),
+    mainnet: {
+      url: node_url("mainnet"),
+      accounts: accounts("mainnet"),
       tags: ["prod", "live"],
     },
-    bscTestnet: {
-      url: node_url("bscTestnet"),
-      accounts: accounts("bscTestnet"),
+    sepolia: {
+      url: node_url("sepolia"),
+      accounts: accounts("sepolia"),
       tags: ["test", "live"],
     },
   },
   etherscan: {
     apiKey: {
-      bsc: verifyKey("bscscan"),
-      bscTestnet: verifyKey("bscscan"),
+      mainnet: verifyKey("etherscan"),
+      sepolia: verifyKey("etherscan"),
     },
   },
   sourcify: {
