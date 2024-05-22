@@ -1,26 +1,15 @@
-# Logs
-logs
-*.log
-
-# dotenv environment variable files
+node_modules
 .env
 
-# Foundry 
-out
-cache_forge
-lcov.info
-coverage
-broadcast
+# Hardhat files
+/cache
+/artifacts
 
-# Mac
-.DS_STORE
+# TypeChain files
+/typechain
+/typechain-types
+/types
 
-# Hardhat
-artifacts
-cache
-
-# Node
-node_modules
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# solidity-coverage files
+/coverage
+/coverage.json
